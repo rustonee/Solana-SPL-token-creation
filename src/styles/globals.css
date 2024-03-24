@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Cal Sans SemiBold';
+  font-weight: 500;
+  src: url('/fonts/CalSans-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ClashDisplay';
+  font-weight: 500;
+  src: url('/fonts/ClashDisplay-Regular.ttf') format('truetype');
+}
+
+html {
+  font-family: 'ClashDisplay';
+}
+
+body {
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  caret-color: white;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::selection {
+  background-color: #673dff;
+}
+
+::selection {
+  background-color: #673dff;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+rect {
+  animation: 1s linear 0s infinite normal none running dash;
+}
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
